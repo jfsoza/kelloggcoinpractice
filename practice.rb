@@ -49,7 +49,7 @@ elsif blockchain[index]["from_user"]=="brian"
   brianbalance = brianbalance - blockchain [index]["amount"]
 elsif blockchain[index]["from_user"]=="evan"
   evanbalance = evanbalance - blockchain [index]["amount"]
-else blockchain[index]["from_user"]=="anthony"
+elsif blockchain[index]["from_user"]=="anthony"
   anthonybalance = anthonybalance - blockchain [index]["amount"]
 end
 
@@ -59,7 +59,7 @@ elsif blockchain[index]["to_user"]=="brian"
   brianbalance = blockchain [index]["amount"] + brianbalance
 elsif blockchain[index]["to_user"]=="evan"
   evanbalance = blockchain [index]["amount"] + evanbalance
-else blockchain[index]["to_user"]=="anthony"
+elsif blockchain[index]["to_user"]=="anthony"
   anthonybalance = blockchain [index]["amount"] + anthonybalance
 end
 index = index +1
