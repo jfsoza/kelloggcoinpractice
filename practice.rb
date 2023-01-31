@@ -65,7 +65,7 @@ end
 index = index +1
 end
 
-puts benbalance 
-puts brianbalance 
-puts evanbalance 
-puts anthonybalance 
+puts "Ben's KelloggCoin Balance is #{benbalance}" 
+puts "Brian's KelloggCoin Balance is #{brianbalance}"
+puts "Ben's KelloggCoin Balance is #{evanbalance}"
+puts "Anthony's KelloggCoin Balance is #{anthonybalance}"
