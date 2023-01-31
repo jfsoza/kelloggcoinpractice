@@ -27,3 +27,45 @@ blockchain = [
 # Anthony's KelloggCoin balance is 2650
 
 # 👇👇👇 Your code HERE 👇👇👇
+index = 0
+benbalance = 0
+brianbalance = 0
+evanbalance = 0
+anthonybalance = 0
+
+loop do
+  if index == blockchain.size
+    break
+  end
+
+if blockchain[index]["from_user"]=="nil"
+  benbalance = 0
+  brianbalance = 0
+  evanbalance = 0
+  anthonybalance = 0
+elsif blockchain[index]["from_user"]=="ben"
+  benbalance = benbalance - blockchain [index]["amount"]
+elsif blockchain[index]["from_user"]=="brian"
+  brianbalance = brianbalance - blockchain [index]["amount"]
+elsif blockchain[index]["from_user"]=="evan"
+  evanbalance = evanbalance - blockchain [index]["amount"]
+else blockchain[index]["from_user"]=="anthony"
+  anthonybalance = anthonybalance - blockchain [index]["amount"]
+end
+
+if blockchain[index]["to_user"]=="ben"
+  benbalance = blockchain [index]["amount"] + benbalance
+elsif blockchain[index]["to_user"]=="brian"
+  brianbalance = blockchain [index]["amount"] + brianbalance
+elsif blockchain[index]["to_user"]=="evan"
+  evanbalance = blockchain [index]["amount"] + evanbalance
+else blockchain[index]["to_user"]=="anthony"
+  anthonybalance = blockchain [index]["amount"] + anthonybalance
+end
+index = index +1
+end
+
+puts benbalance 
+puts brianbalance 
+puts evanbalance 
+puts anthonybalance 
